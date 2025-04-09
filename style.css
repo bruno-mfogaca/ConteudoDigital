@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    background: linear-gradient(135deg, #1a5f46, #2a9d8f);
+    color: #2d3436;
+    line-height: 1.6;
+  }
+
+  header {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    font-size: 3.5em;
+    color: #1a5f46;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .nome-profissional {
+    font-size: 1.8em;
+    color: #2a9d8f;
+    font-weight: bold;
+  }
+
+  header h3 {
+    color: #1a5f46;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+    padding: 15px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #2a9d8f;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s;
+    white-space: nowrap;
+  }
+
+  nav a:hover {
+    background: #1a5f46;
+    color: #fff;
+  }
+
+  section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 50px auto;
+  }
+
+  section+section {
+    margin-top: 50px;
+  }
+
+  #quem-sou .quem-sou {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #quem-sou img.foto-linkedin {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #2a9d8f;
+    flex-shrink: 0;
+  }
+
+  #quem-sou div {
+    flex: 1;
+  }
+
+  #quem-sou h2 {
+    color: #1a5f46;
+    margin-bottom: 20px;
+  }
+
+  #repdigital {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  #repdigital h2 {
+    color: #1a5f46;
+    margin-bottom: 20px;
+  }
+
+  .carrossel-container {
+    position: relative;
+    padding: 0 40px;
+  }
+
+  .carrossel-instagram {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding-top: 20px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .carrossel-instagram::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carrossel-instagram {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .video-wrapper,
+  .instagram-post {
+    min-width: 40%;
+    flex: 0 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(0.9);
+    transition: transform 0.3s;
+    scroll-snap-align: center;
+  }
+  
+  .video-wrapper:hover,
+  .instagram-post:hover {
+    transform: scale(0.92);
+  }
+
+  .instagram-media {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 400px !important;
+  }
+
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 1.8em;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .prev-button {
+    left: -20px;
+  }
+
+  .next-button {
+    right: -20px;
+  }
+
+  .prev-button:hover,
+  .next-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  #redes {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #redes h2 {
+    color: #1a5f46;
+    margin-bottom: 20px;
+  }
+
+  #materias {
+    text-align: center;
+    background: #fff;
+    padding: 60px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #materias h2 {
+    color: #1a5f46;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .materias-iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .materias-iframe+a {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #1a5f46;
+    font-weight: bold;
+  }
+
+  #habilidades {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #habilidades h2 {
+    color: #1a5f46;
+  }
+
+  .habilidades-lista {
+    columns: 2;
+    list-style: none;
+    margin-top: 20px;
+  }
+
+  .habilidades-lista li {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1a5f46;
+    break-inside: avoid;
+  }
+
+  .habilidades-lista i {
+    color: #2a9d8f;
+  }
+
+  footer {
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .download-btn {
+    display: inline-block;
+    background: #218c74;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .download-btn i {
+    margin-right: 10px;
+  }
+
+  .download-btn:hover {
+    background: #1a5f46;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Se quiser manter a consistência com os outros botões sociais */
+  .social-buttons .download-btn {
+    font-size: 1.2em;
+    padding: 12px 25px;
+  }
+
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .social-btn {
+    font-size: 2em;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .instagram {
+    background: #1a5f46;
+  }
+
+  .linkedin {
+    background: #2a9d8f;
+  }
+
+  .whatsapp {
+    background: #218c74;
+  }
+
+  .social-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 1200px) {
+    section {
+      margin: 30px auto;
+      padding: 30px 15px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.2em;
+    }
+
+    .nome-profissional {
+      font-size: 1.3em;
+    }
+
+    header h3 {
+      font-size: 1.1em;
+    }
+
+    nav ul {
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: space-around;
+    }
+
+    nav a {
+      padding: 8px 15px;
+      font-size: 0.9em;
+    }
+
+    #quem-sou .quem-sou {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #quem-sou img.foto-linkedin {
+      width: 200px;
+      height: 200px;
+    }
+
+    .carrossel-container {
+      padding: 0 30px;
+    }
+
+    .video-wrapper,
+    .instagram-post {
+      min-width: 85%;
+    }
+
+    .prev-button {
+      left: 5px;
+      padding: 10px;
+    }
+
+    .next-button {
+      right: 5px;
+      padding: 10px;
+    }
+
+    .materias-iframe {
+      height: 400px;
+    }
+
+    .habilidades-lista {
+      columns: 1;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8em;
+    }
+
+    .nome-profissional {
+      font-size: 1.1em;
+    }
+
+    header h3 {
+      font-size: 1em;
+    }
+
+    nav ul {
+      gap: 10px;
+    }
+
+    nav a {
+      padding: 6px 12px;
+      font-size: 0.8em;
+    }
+
+    section {
+      padding: 20px 10px;
+      margin: 20px auto;
+    }
+
+    #quem-sou img.foto-linkedin {
+      width: 180px;
+      height: 180px;
+    }
+
+    .carrossel-container {
+      padding: 0 15px;
+    }
+
+    .video-wrapper,
+    .instagram-post {
+      min-width: 95%;
+    }
+
+    .instagram-media {
+      min-height: 350px !important;
+    }
+
+    .materias-iframe {
+      height: 300px;
+    }
+
+    .social-btn {
+      font-size: 1.5em;
+      padding: 10px 20px;
+    }
+  }
